@@ -1,1 +1,1 @@
-0x0F-load_balancer by the author morakinyo75
+0x0F-load_balancer by morakinyo75
