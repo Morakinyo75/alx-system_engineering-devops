@@ -41,7 +41,7 @@ frontend www.mydomain3463746-frontend
         default_backend www.mydomain3463746-backend
 
 frontend www.mydomain3463746-frontend-https
-        bind *:443 ssl crt /etc/letsencrypt/live/www.mydomain3463746.tech/akin.pem
+        bind *:443 ssl crt /etc/letsencrypt/live/www.mydomain3463746.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend www.mydomain3463746-backend
 
