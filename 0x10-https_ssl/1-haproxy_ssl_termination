@@ -33,19 +33,19 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend mydomain3463746-frontend
+frontend www.mydomain3463746-frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend mydomain3463746-backend
+        default_backend www.mydomain3463746-backend
 
-frontend mydomain3463746-frontend-https
+frontend www.mydomain3463746-frontend-https
         bind *:443 ssl crt /etc/letsencrypt/live/www.mydomain3463746.tech/akin.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend mydomain3463746-backend
+        default_backend www.mydomain3463746-backend
 
-backend mydomain3463746-backend
+backend www.mydomain3463746-backend
         balance roundrobin
         server 113456-web-01 100.25.45.214:80 check
         server 113456-web-02 35.174.208.218:80 check
