@@ -41,7 +41,7 @@ frontend mydomain3463746-frontend
         default_backend mydomain3463746-backend
 
 frontend mydomain3463746-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/mydomain3463746.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.mydomain3463746.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend mydomain3463746-backend
 
